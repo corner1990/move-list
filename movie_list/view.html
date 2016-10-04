@@ -1,0 +1,30 @@
+
+<h1 class="page header">{{title}}</h1>
+<div class="list-group">
+  <a href="#/detail/{{item.id}}" class="list-group-item " ng-repeat="item in subjects">
+  <span class="badge">{{item.rating.average}}</span>
+    <div class="media">
+      <img class="media-left pull-left" ng-src="{{item.images.small}}" alt="{{item.title}}">
+    <div class="media-body pull-left">
+      <h4 class="media-heading">{{item.title}}</h4>
+    <p>导演：<strong>{{item.directors[0].name}}</strong></p>
+    <p>类型：<strong>{{item.genres.join('...')}}</strong></p>
+    </div>
+  </div>
+  </a>
+</div>
+<div class="spinner" ng-show="loding">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
+<div ng-show="!loding">
+  <p>总共：{{totalCount}}条记录</p>
+  <p>总共：{{totalPage}}页</p>
+  <nav>
+    <ul class="pager">
+      <li ng-class="{disabled: countPage <= 1}"><a  ng-click="go(countPage-1)">&lt;&lt;&nbsp;Previous</a></li>
+      <li ng-class="{disabled: countPage >= totalPage}"><a  ng-click="go(countPage+1)">Next&nbsp;&gt;&gt;</a></li>
+    </ul>
+  </nav>
+</div>
