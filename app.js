@@ -12,7 +12,7 @@ angular.module('moviecat',[
 }])
 .controller('searchController',['$scope','$route',function($scope,$route){
 	$scope.searchText='';
-	$scope.search = function(){
+	$scope.search = function(){console.log($scope.searchText)
 		$route.updateParams({crate:'search',q : $scope.searchText})
 	}
 }]);

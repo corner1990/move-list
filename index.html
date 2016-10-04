@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh-CN" ng-app="moviecat">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +8,8 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="app.css">
 </head>
-
-<body>
+<body 
+>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -30,7 +29,7 @@
           <li><a href="#">Help</a></li>
         </ul>
         <form class="navbar-form navbar-right" ng-submit="search()">
-          <input type="text" class="form-control" placeholder="Search..." ng-module="searchText">
+          <input type="text" class="form-control" placeholder="Search..." ng-model="searchText">
         </form>
       </div>
     </div>
